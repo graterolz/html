@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>funcion-parametros-defecto</title>
+		<script type="text/javascript">
+			function bienvenida(nombre) {
+				if (typeof nombre == 'undefined'){
+					document.write('Bienvenido a la web');
+				} else {
+					document.write('Bienvenido de nuevo, ');
+					document.write(nombre);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write('<p align="center">');
+			document.write('<b>Mensaje de bienvenida genérico: </b><br>');
+			bienvenida();
+			document.write('<p align="center">');
+			document.write('<b>Mensaje de bienvenida personalizado: </b><br>');
+			bienvenida('Emilio');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Iniciar sesión | Solución 360&#176;</title>
+		<link rel="shortcut icon" href="./import/images/icon.png"/>
+		<script type="text/javascript">if (parent.frames.length !== 0) { top.location = 'http://dev.ciaseguros.pe/pos'; }</script>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link href="./import/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+		<link href="./import/iCheck/square/green.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/skins/skin-green.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="login-page">
+		<div class="login-box">
+			<div class="login-box-body">
+				<div class="login-logo">
+					<!--<a href="http://dev.ciaseguros.pe/">Solución <b>360&#176;</b></a>-->
+					<img src="images/logo.jpg" class="logo-image" alt="Logo" />
+				</div>
+				<p class="login-box-msg">Por favor, ingrese a su cuenta.</p>
+				<form action="http://dev.ciaseguros.pe/auth/login" method="post" accept-charset="utf-8">
+					<input type="hidden" name="gri_token" value="cf876edf3357b588699a7b9b17102070" style="display:none;" />
+					<div class="form-group has-feedback">
+						<input type="email" name="identity" value="" class="form-control" placeholder="Enviar vía Email" />
+						<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input type="password" name="password" class="form-control" placeholder="Contraseña" />
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block btn-flat"><i class="glyphicon glyphicon-log-in"></i> Ingresar</button>
+				</form>
+				<div class="login-box-msg-password">
+					<p>&nbsp;</p>
+					<p><span class="text-danger">¿Olvidaste tu contraseña?</span><br>
+						¡No se preocupe! <a href="#" class="text-danger" data-toggle="modal" data-target="#myModal">haga clic aquí</a> para reiniciar
+					</p>
+				</div>
+				<div style="width: 95%; margin: 0 auto; text-align: left">
+				</div>
+			</div>
+		</div>
+		<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form action="http://dev.ciaseguros.pe/auth/forgot_password" method="post" accept-charset="utf-8">
+						<input type="hidden" name="gri_token" value="cf876edf3357b588699a7b9b17102070" style="display:none;" />
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">¿Se te olvidó tu contraseña?</h4>
+						</div>
+						<div class="modal-body">
+							<p><span class="text-password">Introduzca su dirección de correo electrónico para restablecer la contraseña.</span></p>
+							<input type="email" name="forgot_email" placeholder="Enviar vía Email" autocomplete="off" class="form-control placeholder-no-fix">
+						</div>
+						<div class="modal-footer">
+							<button data-dismiss="modal" class="btn btn-default pull-left" type="button">Cerrar</button>
+							<button class="btn btn-primary" type="submit">Guardar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./import/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+		<script src="./import/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./import/iCheck/icheck.min.js" type="text/javascript"></script>
+		<script>
+			$(function () {
+				if ($('#identity').val())
+					$('#password').focus();
+				else
+					$('#identity').focus();
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-green',
+					radioClass: 'iradio_square-green',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+	</body>
+</html>

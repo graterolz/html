@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>banner-ola</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<script type="text/javascript">
+			function oBandera(texto, amp, fase, rap, separ, px, py) {
+				this.texto = texto;
+				this.letras = new Array();
+				this.yini = py;
+				this.xini = px;
+				this.separ = separ;
+				this.incY = 0;
+				this.veces = 1;
+				this.amp = amp||10;
+				this.rap = rap||5;
+				this.fase = fase||1;
+				this.creaPalabra = creaPalabra;
+				this.ondear = ondear;
+				this.tipo = ponTipo;
+				this.creaPalabra();
+
+				function creaEtq(letra, x, y) {
+					var etq = document.createElement("DIV");
+					etq.id = "car_"+letra;
+					etq.style.position = "absolute";
+					etq.style.top = y+"px";
+					etq.style.left = x+"px";
+					etq.style.width = 10;
+					etq.style.height = 10;
+					etq.innerHTML = letra;
+					document.body.appendChild(etq);
+					return etq;
+				}
+				function creaPalabra() {
+					var i;
+					var letras=new Array();
+					for(i=0; i < this.texto.length; i++)
+						letras[i]=creaEtq(this.texto.substr(i,1), i*this.separ+this.xini, this.yini)
+					this.letras = letras;	
+				}
+				function ondear(nban) {
+					var lac;
+					var posY;
+					for (lac=0; lac< this.letras.length; lac++){
+						posY = this.amp*Math.sin(this.fase*lac*Math.PI/90 + this.veces*Math.PI/90)
+						posY = this.yini + Math.round(posY)
+						this.letras[lac].style.top = posY+'px';
+						this.veces+=1;
+						if (this.veces > 180)
+							this.veces = 0;
+					}
+					this.tempor = setTimeout(nban+".ondear('"+nban+"')", this.rap);
+				}
+				function ponTipo(familia, peso, tama, color) {
+					var i;
+					for(i=0; i < this.letras.length; i++){
+						this.letras[i].style.fontFamily = familia;
+						this.letras[i].style.fontWeight = peso;
+						this.letras[i].style.fontSize = tama;
+						this.letras[i].style.color = color;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			miban = new oBandera('Javascript', 20, 15, 100, 15, 10, 20);
+			miban.tipo("Arial", "bold", 16, "blue");
+			miban.ondear('miban');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>escape-unescape</title>
+		<script type="text/javascript">
+			function escape_1(cadena) {
+				return(escape(cadena));
+			}
+			//
+			function unescape_1(cadena) {
+				return(unescape(cadena)); 
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var cad = prompt('Ingrese una cadena ','');
+			document.write('Según la función escape(), el similar de ' + cad + ' es: ');
+			document.write(escape_1(cad));
+			document.write('<br>');  
+			document.write('Llevemos la cadena ' + escape_1(cad) + ' a: ');
+			document.write(unescape_1(escape_1(cad)));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- Icons -->
+		<link rel="stylesheet" href="style.css"></head>
+	</head>
+	<body>
+		<style type="text/css">
+		.big {
+			width:100px !important;
+			height:100px !important;
+			padding-top: 8% !important;
+			font-size: 50px !important;
+			margin-right: 0px !important;
+		}
+		.logo {
+			-webkit-box-shadow:0px 1px 1px grey;
+			-moz-box-shadow:0px 1px 1px grey;
+			box-shadow:0px 1px 1px grey;
+		}
+		.center-btn{
+			text-align: center
+		}
+		.dropdown-content li > a, .dropdown-content li > span {
+			color: #000000 !important;
+		}
+		.text-r{
+			font-size: 22px;
+		}
+		</style>
+		<div class="row logo">
+			<div class="col s6">
+				<div class="card-image left-align white lighten-3">
+					<img class="responsive-img" src="https://apps.gtipredictive.com/images/gti_logo_masthead.png" width="50%">
+				</div>
+			</div>
+			<div class="col s6">
+				<div class="card-content right-align">
+					<span class="black-text">
+						<span class="text-r">888.473.9675</span>
+						<br>
+						<span>
+							Welcome SuperUser87
+						</span>
+						<br>
+						<span class="red-text">
+							<a href="" class="red-text">Demo Project</a>
+							&nbsp;&nbsp;&nbsp;
+							<a href="" class="red-text">log out</a>
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>	
+		<div class="container" style="margin-top:8%;">
+			<div class="row">
+				<div class="col s3">
+					<div class="input-field col s12">
+						<select>
+							<option value="" disabled selected>Choose your option</option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+						</select>
+						<label>Selected Project</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-vibe big"></i></a>
+					<p>VibrePro Lite</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-vibe big"></i></a>
+					<p>VibrePro</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-thermo big"></i></a>
+					<p>ThemoPro</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-vibe big"></i></a>
+					<p>VibrePro EX</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-uploadcsv big"></i></a>
+					<p>Upload CSV</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-report big"></i></a>
+					<p>Report Center</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-preferences big"></i></a>
+					<p>Preferences</p>
+				</div>
+				<div class="col s2 center-btn">
+					<a class="btn-floating btn-large waves-effect waves-light #212121 grey darken-4 big" href="#!"><i class="large icon-Myusers big"></i></a>
+					<p>My Users</p>
+				</div>
+			</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('select').material_select();
+			});
+		</script>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	</body>
+</html>

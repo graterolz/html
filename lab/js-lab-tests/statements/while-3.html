@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>while-3</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero, es_primo;
+			do {
+				numero = prompt('Dame un número','');
+			} while (isNaN(numero) || (numero<1));
+
+			es_primo = true;
+			document.write('El número ' + numero);
+
+			for(i=2;i<numero;i++) {
+				if (numero % i == 0) {
+					es_primo = false;
+				}
+			}
+
+			if (es_primo){
+				document.write(' es primo');
+			}
+			else{
+				document.write(' no es primo'); 
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for-4</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero,es_primo,posicion;
+			var divisores = new Array();
+
+			numero = prompt("Dame un número...","");
+			es_primo = true;
+			posicion = 0;
+			divisores[posicion] = 1;
+
+			for(i=2;i<numero;i++) {
+				if (numero % i == 0) {
+					es_primo = false;
+					posicion++;
+					divisores[posicion] = i;
+				}
+			}
+
+			divisores[posicion+1] = numero;
+			document.write('El número ' + numero);
+
+			if (es_primo){
+				document.write(' es primo<br>');   
+			}
+			else{
+				document.write(' no es primo<br>');
+			}
+
+			document.write('Sus divisores son: ' + divisores); 
+		</script>
+	</body>
+</html>

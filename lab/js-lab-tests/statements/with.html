@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>with</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero,raiz;
+			do {
+				numero = prompt('Dame un número','');
+			} while (isNaN(numero));
+
+			document.write('La raíz cuadrada de ' + numero + ' es: ');
+			with (Math)
+			document.write(sqrt(numero));
+		</script>
+	</body>
+</html>

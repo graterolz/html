@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<lista>
+	<link>
+		<titulo>Google</titulo>
+		<href>http://www.google.es</href>
+	</link>
+	<link>
+		<titulo>Facebook</titulo>
+		<href>http://www.facebook.com</href>
+	</link>
+	<link>
+		<titulo>Twitter</titulo>
+		<href>http://www.twitter.com</href>
+	</link>
+</lista>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>precedencia-operadores</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var Fahrenheit = 100;
+			var Celsius;
+			var t1 = 30;
+			var t2 = 15;
+			
+			document.write('<h4 align="center">');
+			document.write('Precedencia de Operadores Aritméticos');
+			document.write('</h4><br><hr>'); 
+			document.write('Celsius: Fahrenheit - 32 * 5/9<br>');
+			
+			Celsius = Fahrenheit - 32 * 5 / 9;
+			document.write('100 Grados Fahrenheit son: ' + Celsius + ' grados Celsius <br>');
+			
+			Celsius = (Fahrenheit - 32) * 5 / 9;
+			document.write('100 Grados Fahrenheit son: ' + Celsius + ' grados Celsius <br>');
+			
+			document.write('<hr><h4 align="center">');
+			document.write('Precedencia del operador de concatenación con aritméticos');
+			document.write('</h4><br><hr>');
+			document.write('Temperatura Sala 1: ' + t1 + ' grados<br>');
+			document.write('Temperatura Sala 2: ' + t2 + ' grados<br>');
+			document.write('Suma de temperaturas de las dos salas= ' + t1 + t2);
+			document.write('<br>');
+			document.write('Suma de temperaturas de las dos salas= ' + (t1 + t2));
+			document.write('<br>');
+			
+			c1 = prompt('Dame un numero A','');
+			c2 = prompt('Dame un numero B','');
+			c1 = 0+c1;
+			c2 = 0+c2; 
+			c3 = c1+c2; 
+			document.write(c3);
+		</script>
+	</body> 
+</html>

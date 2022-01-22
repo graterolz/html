@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>listas-dependientes</title>
+		<script type="text/javascript">
+			var valores_select_1 = new Array(
+				'África','América','Asia','Europa','Oceanía'
+			);
+			var fila1 = new Array(
+				'Antílope','Cebra','Chimpancé','Cocodrilo','Elefante','Hiena','Jirafa','León','Ñu','Rinoceronte'
+			);
+
+			var fila2 = new Array(
+				'Alce','Armadillo','Boa','Cóndor','Jaguar','Lince','Llama','Ñandú','Perezoso','Puma','Tapir','Tucán'
+			);
+
+			var fila3 = new Array(
+				'Camello','Cobra','Elefante','Marabú','Panda','Rinoceronte','Semnotipeco','Tigre','Yac'
+			);
+
+			var fila4 = new Array(
+				'Armiño','Faisán','Halcón','Jabalí','Lobo','Musaraña','Nutria','Oso','Topo'
+			);
+
+			var fila5 = new Array(
+				'Cacatúa','Canguro','Dingo','Emú','Equidna','Kiwi','Koala','Ornitorrinco','Periquito','Wombat'
+			);
+
+			var valores_select_2 = new Array(fila1,fila2,fila3,fila4,fila5);
+
+			function escribir_opciones_select(valores) {
+				for(var i=0;i<valores.length;i++){
+					window.document.writeln('<option value="' + valores[i] + '">' + valores[i] + '</option>');
+				}
+			}
+
+			function cambiar_select_2(formulario,valores_select_1,valores_select_2) {
+				var indice = formulario.select_1.selectedIndex;
+				formulario.select_2.length = valores_select_2[indice].length;
+				for(var i=0;i<valores_select_2[indice].length;i++) {
+					formulario.select_2.options[i].text = valores_select_2[indice][i];
+					formulario.select_2.options[i].value = valores_select_2[indice][i];
+				}
+				formulario.select_2.selectedIndex;
+			} 
+		</script>
+	</head>
+	<body>
+		<form name="formulario">
+			<center>
+				<br>
+				<br>
+				<h1>Animales Típicos</h1>
+				<br>
+				<br>
+				<font size=4><b>Continente</b></font>
+				<select name="select_1" onChange="cambiar_select_2(this.form,valores_select_1,valores_select_2)">
+					<script type="text/javascript">
+						escribir_opciones_select(valores_select_1)
+					</script> 
+				</select>
+				<font size=4><b>Animal</b></font>
+				<select name="select_2">
+					<script type="text/javascript">
+						escribir_opciones_select(valores_select_2[0])
+					</script>
+				</select>
+				<br>
+			</center>
+		</form>
+	</body>
+</html>

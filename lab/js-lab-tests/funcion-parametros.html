@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>funcion-parametros</title>
+		<script type="text/javascript">
+			function escribe_dia_de_semana(numero_de_dia){
+				var dia = new Array(7);
+				dia[0] = 'domingo';
+				dia[1] = 'lunes';
+				dia[2] = 'martes';
+				dia[3] = 'miercoles';
+				dia[4] = 'jueves';
+				dia[5] = 'viernes';
+				dia[6] = 'sabado';
+				document.write(dia[numero_de_dia] + ', ');
+			}
+			//
+			function fecha_de_hoy(){
+				var fecha = new Date();
+				escribe_dia_de_semana(fecha.getDay());
+				document.write(fecha.getDate());
+				document.write('/');
+				document.write(fecha.getMonth()+1);
+				document.write('/');
+				document.write(fecha.getYear());
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write('Bienvenido, hoy es: ');  
+			fecha_de_hoy();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,191 @@
+*{	
+	margin-top: 10px;
+  	margin-bottom: 10px;
+  	margin-left: 10px;
+  	margin-right: 10px;
+
+	font-family: Arial;
+	font-size: 12px;    	
+}
+body{
+	background-image: url('../img/fondos/fondo_html.jpg');	
+}
+h3{
+	background-color: #20B2AA;	
+	border: 2px solid #000000;
+	text-align: center;
+}
+h3:hover{
+	background-color: #4682B4;
+	border-radius: 50px;	
+}
+div{
+	overflow: hidden;	
+}
+p{
+	text-align: justify;
+}
+.DivGeneral,
+.DivGeneral .Titulo,
+.DivGeneral .BarraLateral,
+.DivGeneral .BarraLateral .Menu,
+.DivGeneral .BarraLateral .Barra,
+.DivGeneral .BarraLateral, 
+.DivGeneral .Contenido,
+.DivGeneral .BarraLateral2,
+.DivGeneral .BarraLateral2 .Menu,
+.DivGeneral .BarraLateral2 .Barra{
+	border: 3px solid #FFF;	
+	border-radius: 5px;	
+}
+.DivGeneral{
+	background-image:url('../img/fondos/fondo_div.jpg');
+}
+.DivGeneral .BarraLateral,
+.DivGeneral .Contenido,
+.DivGeneral .BarraLateral2{
+	background-image:url('../img/fondos/fondo_div2.jpg');
+}
+.DivGeneral .BarraLateral .Menu,
+.DivGeneral .BarraLateral .Barra,
+.DivGeneral .BarraLateral2 .Menu,
+.DivGeneral .BarraLateral2 .Barra{
+	background-image:url('../img/fondo_div2.jpg');
+}
+#Caja1,
+#Caja2,
+#Caja3,
+#Caja4,
+#Caja5,
+#Caja6,
+#Caja7,
+#Caja8,
+#Caja9,
+#Caja10,
+#Img_1,
+#Img_2{
+	border: 3px solid #000000;
+	background-image: url('../img/fondo_div5.jpeg');
+	border-radius:10px;
+}
+.DivGeneral .BarraLateral,
+.DivGeneral .BarraLateral2{
+	width: 200px;
+	height: 670px;	
+	float:left;	
+}
+.DivGeneral{ 	
+	margin:auto;
+	width: 1025px;
+	height: 800px;
+}
+.DivGeneral .Titulo{
+	width: 1000px;
+	height: 75px; 	
+}
+.DivGeneral .Contenido{
+	border: 3px solid #fff;
+	width: 545px;
+	height: 670px;		
+	float:left;
+}
+.DivGeneral .BarraLateral .Menu,
+.DivGeneral .BarraLateral .Menu a,
+.DivGeneral .BarraLateral2 .Menu,
+.DivGeneral .BarraLateral .Barra,
+.DivGeneral .BarraLateral .Barra a img,
+.DivGeneral .BarraLateral2 .Barra,
+.DivGeneral .BarraLateral2 .Barra img,
+.DivGeneral .BarraLateral2 .Menu a img{
+	border: 3px solid #000000;
+	list-style: none;
+}
+.DivGeneral .BarraLateral .Menu,
+.DivGeneral .BarraLateral2 .Menu{	
+	width: 175px;
+	height: 205px;	
+}
+.DivGeneral .BarraLateral .Barra,
+.DivGeneral .BarraLateral2 .Barra{
+	width: 175px;
+	height: 425px;
+}
+.DivGeneral .BarraLateral .Menu a{	
+	text-decoration:none;
+	font-size: 15px;
+	background-color: #FFFF99;
+
+	background-image: url('../img/flecha.png');
+	background-repeat: no-repeat;	
+}
+.DivGeneral .BarraLateral .Menu a:hover{
+	background-color: #4682B4;
+	border-radius: 50px;
+}
+#Boton1{
+	padding-left: 22px;
+}
+#Boton2{
+	padding-left: 21px;
+}
+#Boton3{
+	padding-left: 44px;
+}
+#Boton4{
+	padding-left: 10px;
+}
+#Boton5{
+	padding-left: 5px;	
+}
+#Boton6{
+	padding-left: 12px;	
+}
+.DivGeneral .BarraLateral .Barra a img,
+.DivGeneral .BarraLateral2 .Menu a img{
+	width: 130px;
+	height: 100px;
+
+}
+.DivGeneral .BarraLateral2 .Menu a img{
+	width: 130px;
+	height: 140px;
+}
+.DivGeneral .BarraLateral2 .Barra img{
+	width: 150px;
+	height: 185px;
+}
+.Contenido #Caja1{
+	height: 135px;		
+}
+.Contenido #Img1,
+.Contenido #Img2{
+	width: 500px;
+	height: 160px;
+}
+.Contenido #Caja2{
+	height: 297px;
+}
+.Contenido #Caja3{
+	height: 270px;
+}
+.Contenido #Caja4{
+	height: 360px;
+}
+.Contenido #Caja5{
+	height: 420px;
+}
+.Contenido #Caja6{
+	height: 209px;
+}
+.Contenido #Caja7{
+	height: 440px;	
+}
+.Contenido #Img2{
+	height: 168px;
+}
+.Contenido #Caja8{
+	height: 646px;	
+}
+.Contenido #Caja9{
+	height: 148px;	
+}

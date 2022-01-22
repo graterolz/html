@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>conversor-monedas</title>
+		<script type="text/javascript">
+			var nombre_monedas = new Array(
+				'Euros',
+				'Chelines austríacos',
+				'Dragma griego',
+				'Escudos portugueses',
+				'Florines holandeses',
+				'Francos belgas',
+				'Francos franceses',
+				'Francos luxenburgueses',
+				'Libras Irlandesas',
+				'Liras italianas',
+				'Marcos alemanes',
+				'Marcos finlandeses',
+				'Pesetas españolas'
+			);
+
+			var valor_monedas = new Array(
+				166.386,
+				12.0917,
+				0.488295,
+				0.829929,
+				75.5026,
+				4.1246,
+				25.3654,
+				4.1246,
+				211.266,
+				0.0859311,
+				85.0718,
+				279841,
+				1
+			);
+
+			function escribir_opciones_select() {
+				for (var i=0;i<nombre_monedas.length;i++){
+					document.writeln("<option value='" + valor_monedas[i] + "'>" + nombre_monedas[i] + "</option>");
+				}
+			}
+
+			function realizar_cambio(formulario) {
+				var opcion_origen= formulario.moneda_origen.selectedIndex;
+				var valor_origen = formulario.moneda_origen.options[opcion_origen].value; 
+				var opcion_destino = formulario.moneda_destino.selectedIndex;
+				var valor_destino= formulario.moneda_destino.options[opcion_destino].value; 
+				var importe= formulario.importe.value;
+				formulario.cambio.value = (importe*valor_origen)/valor_destino; 
+			}
+		 </script>
+	</head>
+	<body>
+		<center>
+			<h2>Conversor de Monedas</h2>
+			<form name='formulario'>
+				<table border=0 bgcolor='#FFFFCC' style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align='center'><b>Moneda Origen</b></td>
+						<td align='center'><b>Moneda Destino</b></td>
+					</tr>
+					<tr>
+						<td>
+							<select name='moneda_origen' onChange='realizar_cambio(this.form)'>
+								<script type="text/javascript">
+									escribir_opciones_select();
+								</script> 
+							</select>
+						</td>
+						<td>
+							<select name='moneda_destino' onChange='realizar_cambio(this.form)'>
+								<script type="text/javascript">
+									escribir_opciones_select();
+								</script>
+							</select> 
+						</td>
+					</tr>
+					<tr>
+						<td align='center'><b>Importe:</b></td>
+						<td align='center'><b>Cambio:</b></td>
+					</tr>
+					<tr>
+						<td><input type='text' name='importe' size="20"></td>
+						<td><input type='text' name='cambio' size="20"></td>
+					</tr>
+					<tr>
+						<td colspan=2 align='center'>
+							<input type='button' value='Realizar cambio' onClick='realizar_cambio(this.form)'>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</center>
+	</body>
+</html>

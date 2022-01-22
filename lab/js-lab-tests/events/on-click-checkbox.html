@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-click-checkbox</title>
+		<script type="text/javascript">
+			function comprobarDatos() {
+				with (document.formulario) {
+					if ((menu.checked)&&(vegetariano.checked)) {
+						alert('No hay menú especial vegetariano');
+						menu.focus();
+					} else {
+						submit();
+						alert('Datos enviados');
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="formulario">
+			Datos de embarque:
+			<br>
+			<br>
+			<input type="checkbox" name="vegetariano">Vegetariano<br>
+			<input type="checkbox" name="menor" onClick="alert('Pedir permiso')">Menor de edad<br>
+			<input type="checkbox" name="menu">Menú<br>
+			<input type="submit" name="enviar" onClick="comprobarDatos()">
+		</form>
+	</body>
+</html>

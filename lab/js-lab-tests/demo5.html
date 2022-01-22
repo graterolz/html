@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de uso de los métodos alert y prompt</title>
+		<script type="text/javascript">
+			function obtener_valor() {
+				return(prompt("Introduce un número",""))
+			}
+			function comprueba_numero() {
+				var mensaje;
+				if (isNaN(valor) || valor==" " || valor==null) {
+					alert("CUIDADO: el valor introducido no es un número...");
+					mensaje = "no es un número";
+				}else {
+					alert("El valor introducido es un número...");
+					mensaje = "es un número";
+				}
+				return(mensaje);
+			}
+		</script> 
+	</head> 
+	<body>
+		<script type="text/javascript">
+			valor = obtener_valor();
+			fin_mensaje = comprueba_numero(valor);
+			document.write("'" + valor + "'" + " " + fin_mensaje);
+		</script>
+	</body>
+</html>

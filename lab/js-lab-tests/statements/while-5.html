@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>while-5</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero;
+			do {
+				numero = prompt('Dame un número mayor que 1','');
+			} while (isNaN(numero) || (numero<2));
+
+			document.write('Los divisores del ' + numero + ' son: <br>');
+
+			for(i=1;i<numero;i++) {
+				if (numero % i != 0) {
+					continue;
+				}
+				document.write('<b>' + i + '</b>x ' + (numero/i) + ' = ' + numero + '<br>');
+			}
+		</script>
+	</body>
+</html>

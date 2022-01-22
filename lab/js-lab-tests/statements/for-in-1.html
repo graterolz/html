@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for-in-1</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var NombreObjeto,objeto;
+			NombreObjeto = prompt("Dame el nombre de un 'objeto' JavaScript...",'navigator');
+			objeto = eval(NombreObjeto);
+
+			document.write('<table>');
+			for(var propiedad in objeto) {
+				document.write('<tr>');
+				document.write("<td align='right' bgcolor='yellow'>");
+				document.write(NombreObjeto + '.' + propiedad + ' : ' + '</td>');
+				document.write("<td align='left'>" + objeto[propiedad] + '</td>');
+				document.write('</tr>');
+			}
+			document.write('</table>');
+		</script>
+	</body>
+</html>

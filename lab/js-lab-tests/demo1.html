@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo del uso del historial de una página</title>
+	</head> 
+	<body>
+		<p align='center'>
+			<button type='button' onClick='mostrar_saludo()'>Mostrar Saludo</button>
+		</p>
+		<script type="text/javascript">
+			function mostrar_saludo() {
+				document.write("<h2 align='center'>Hola mundo</h2>");
+				document.write("<p align='center'>");
+				document.write("<button type='button' onClick='history.back()'>");
+				document.write("Eliminar saludo</button>");
+			}
+		</script>
+	</body>
+</html>

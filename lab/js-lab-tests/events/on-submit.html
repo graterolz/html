@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-submit</title>
+		<script type="text/javascript">
+			function comprobacion() {
+				with (document.formulario) {
+					if (nombre.value!='' && apellidos.value!='' && edad.value!='' && !isNaN(edad.value)){
+						alert('Datos enviados');
+						return true;
+					}else{
+						alert('Datos no válidos');
+						return false;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="formulario" onSubmit="return comprobacion()">
+			<h2>Datos del Usuario:</h2>
+			<b>Nombre:</b>
+			<br>
+			<input type="text" name="nombre">
+			<br>
+			<b>Apellidos:</b>
+			<br>
+			<input type="text" name="apellidos">
+			<br>
+			<b>Edad:</b>
+			<br>
+			<input type="text" name="edad">
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

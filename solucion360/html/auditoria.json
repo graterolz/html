@@ -1,0 +1,107 @@
+{
+	"draw":2,
+	"recordsTotal":"147",
+	"recordsFiltered":"147",
+	"data":[
+		{
+			"ci_codigoAuditoria":"176",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:27:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"102",
+			"cv_valorAnterior":"01\/11\/2016",
+			"cv_valorNuevo":"01\/12\/2016"
+		},
+		{
+			"ci_codigoAuditoria":"176",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:27:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"103",
+			"cv_valorAnterior":"200.00",
+			"cv_valorNuevo":"240.00"
+		},
+		{
+			"ci_codigoAuditoria":"176",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:27:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"104",
+			"cv_valorAnterior":"200.00",
+			"cv_valorNuevo":"220.00"
+		},
+		{
+			"ci_codigoAuditoria":"175",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:27:36",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"REV",
+			"ci_codigoColumna":null,
+			"cv_valorAnterior":null,
+			"cv_valorNuevo":null
+		},
+		{
+			"ci_codigoAuditoria":"174",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"102",
+			"cv_valorAnterior":"01\/11\/2016",
+			"cv_valorNuevo":"01\/12\/2016"
+		},
+		{
+			"ci_codigoAuditoria":"174",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"103",
+			"cv_valorAnterior":"200.00",
+			"cv_valorNuevo":"240.00"
+		},
+		{
+			"ci_codigoAuditoria":"174",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:57",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"UPD",
+			"ci_codigoColumna":"104",
+			"cv_valorAnterior":"200.00",
+			"cv_valorNuevo":"220.00"
+		},
+		{
+			"ci_codigoAuditoria":"173",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:39",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"REV",
+			"ci_codigoColumna":null,
+			"cv_valorAnterior":null,
+			"cv_valorNuevo":null
+		},
+		{
+			"ci_codigoAuditoria":"172",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:34",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"DLT",
+			"ci_codigoColumna":null,
+			"cv_valorAnterior":null,
+			"cv_valorNuevo":null
+		},
+		{
+			"ci_codigoAuditoria":"171",
+			"updated_by":"AdminAdmin",
+			"cf_fechaRegistro":"2016-11-03 15:23:24",
+			"ci_codigoOpcion":"24",
+			"cc_accion":"DLT",
+			"ci_codigoColumna":null,
+			"cv_valorAnterior":null,
+			"cv_valorNuevo":null
+		}
+	]
+}

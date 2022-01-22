@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-blur</title>
+		<script type="text/javascript">
+			function comprobarEdad(objeto) {
+				if (isNaN(objeto.value)) {
+					alert('Introduzca una edad correcta');
+					objeto.value = '';
+					objeto.focus();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			Nombre:
+			<input type="text" name="nombre" size=20 onBlur="if(this.value=='') alert('Debe rellenar el campo Nombre')">
+			<br>
+			<br>
+			Edad:
+			<input type="text" name="edad" onBlur="comprobarEdad(this)">
+		</form>
+	</body>
+</html>

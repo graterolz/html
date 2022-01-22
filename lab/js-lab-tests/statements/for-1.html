@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for-1</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var base,exponente,resultado;
+			base = prompt('Dame la base','');
+			exponente = prompt('Dame el exponente...','');
+			resultado = 1;
+
+			if (exponente>=0) {
+				for(i=1;i<=exponente;i++) {
+					resultado = resultado * base
+				} 
+			}
+			else {
+				for(i=1;i<=-exponente;i++) {
+					resultado = resultado / base
+				}
+			}
+			document.write(base + '<sup>' + exponente + '</sup>= ' + resultado);
+		 </script>
+	</body>
+</html>

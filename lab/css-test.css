@@ -1,0 +1,30 @@
+*{
+	/* padding: Separacion interna entre el contenido y la caja (DIV) */		
+	padding: 0% 0% 0% 0%;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;	
+	padding-bottom: 0%;	
+}
+*{
+	/* margin: Separacion externa entre el contenido y la caja (DIV)*/
+	margin: 0% 10% 0% 10%;
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-top: 0%;
+	margin-bottom: 0%;	
+}
+*{
+	/**/
+	overflow: hidden;
+}
+*{
+	float: left;	
+	float: right;
+	float: none;
+	float: inherit;
+}
+*{
+	width: 0%;
+	height: 0%;
+}

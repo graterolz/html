@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de los objetos textarea y select</title>
+		<script type="text/javascript">
+			function verificar_datos(formulario) {
+				var nueva_ventana;
+				var atributos = " resizable=1, scrollbars=1, left=100, top=200,";
+				var s_asunto = formulario.asunto
+				atributos = atributos + "width=500, height=300";
+				nueva_ventana = window.open("","nueva_ventana",atributos);
+				nueva_ventana.document.write("<h3>Los datos que ha introducido son</h3>");
+				nueva_ventana.document.write("<strong>El asunto es: </strong>");
+				nueva_ventana.document.write(s_asunto.options[s_asunto.selectedIndex].text);
+				nueva_ventana.document.write("<br>");
+				nueva_ventana.document.write("<strong>La sugerencia es: </strong>");
+				nueva_ventana.document.write(formulario.sugerencia.value);
+				nueva_ventana.document.write("<br>");
+				nueva_ventana.document.write("<input type='button' value='Aceptar' onClick='self.close()'>");	
+			}
+		</script> 
+	</head> 
+	<body>
+		<form method='post' action=''>
+			<strong>Seleccione un asunto</strong>
+			<select name='asunto'>
+				<option>Medio ambiente</option>
+				<option>Salud</option>
+				<option>Ocio</option>
+				<option>Cultura</option>
+			</select>
+			<br>
+			<br>
+			<strong>Introduzca la sugerencia</strong>
+			<br>
+			<textarea name='sugerencia' rows='2' cols='50'></textarea>
+		</form>
+		<br>
+		<button type='submit' onClick='verificar_datos(document.forms[0])'>
+			Verificar datos
+		</button>
+	</body>
+</html>

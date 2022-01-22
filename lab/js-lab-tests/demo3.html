@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo del objeto formulario</title>
+		<script type="text/javascript">
+			function mostrar_caracteristicas_formulario(documento) {
+				var nueva_ventana;
+				var atributos = " resizable=1, scrollbars=1, left=100, top=200,";
+				atributos = atributos + "width=800, height=300";
+
+				var numero_de_formularios = documento.forms.length;
+				nueva_ventana = window.open("","nueva_ventana",atributos);
+				nueva_ventana.document.write("<h3>Características de los formularios</h3>");
+				nueva_ventana.document.write("Número de formularios: ");
+				nueva_ventana.document.write(numero_de_formularios + "<br>");
+
+				for(var n=0;n<documento.forms.length;n++) {
+					nueva_ventana.document.write("<strong>action: </strong>");
+					nueva_ventana.document.write(documento.forms[n].action + "<br>");
+					nueva_ventana.document.write("<strong>");
+					nueva_ventana.document.write("Número de elementos del formulario: ");
+					nueva_ventana.document.write("</strong>");
+					nueva_ventana.document.write(documento.forms[n].elements.length + "<br>");
+					nueva_ventana.document.write("<strong>encoding: </strong>");
+					nueva_ventana.document.write(documento.forms[n].encoding + "<br>");
+					nueva_ventana.document.write("<strong>method: </strong>");
+					nueva_ventana.document.write(documento.forms[n].method + "<br>");
+					nueva_ventana.document.write("<strong>target: </strong>");
+					nueva_ventana.document.write(documento.forms[n].target + "<br>");
+					nueva_ventana.document.write("<br>");
+				} 
+			}
+		</script>
+	</head>
+	<body>
+		<h4 align='center'>Documento con dos formularios</h4>
+		<hr>
+		<form method='post' action=''>
+			<strong>Nombres:</strong><input type='text' name='nombres' size=20>
+			<strong>Apellidos:</strong><input type='text' name='apellidos' size=20>
+			<br><br>
+
+			<strong>Nacionalidad:</strong>
+			<input type='radio' name='nacionalidad' value='extranjera' checked>Extranjera
+			<input type='radio' name='nacionalidad' value='venezolana'>Venezolana
+			<br><br>
+
+			<strong>Aficiones:</strong>
+			<input type='checkbox' name='deporte' checked>Deporte
+			<input type='checkbox' name='musica' checked>Música
+			<input type='checkbox' name='otros' checked>Otros
+			<br><br>
+
+			<input type='submit' value='Dar de alta'><input type='reset' value='Borrar'><p>
+		</form>
+		<hr> 
+
+		<form method='post' action=''>
+			<p><strong>Seleccione un tema:</strong>
+			<select name='tema'>
+				<option>Medio ambiente</option>
+				<option>Salud</option>
+				<option>Cultura</option>
+			</select>
+			<br><br>
+
+			<strong>Introduzca la sugerencia:</strong>
+			<textarea name='comentario' rows='2' cols='50'></textarea>
+			<p align='center'>
+				<input type='submit' value='Dar de alta'><input type='reset' value='Borrar'>
+			<p>
+		</form>
+		<hr>
+		<button type='button' onClick='mostrar_caracteristicas_formulario(document)'>
+			Características formularios
+		</button>
+	</body>
+</html>

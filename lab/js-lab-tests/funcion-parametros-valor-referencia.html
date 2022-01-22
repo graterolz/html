@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>funcion-parametros-valor-referencia</title>
+		<script type="text/javascript">
+			function cuadrado(numero) {
+				numero = numero * numero;
+				return(numero);
+			}
+			//
+			function objeto_numero(valor){
+				this.numero=valor;
+			}
+			//
+			function cuadrado_objeto(objeto) {
+				objeto.numero = objeto.numero * objeto.numero;
+				return(objeto.numero);
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero_1 = 4;
+			var numero_2 = new objeto_numero(4);
+			//
+			document.write('Cuadrado del número 4 como parámetro simple: ');
+			document.write(cuadrado(numero_1));
+			document.write('<br>');
+			document.write('Valor de la variable simple después de llamar a la función: ');
+			document.write(numero_1);
+			document.write('<br>');
+			document.write('Cuadrado del número 4 como parámetro de tipo objeto: ');
+			document.write(cuadrado_objeto(numero_2));
+			document.write('<br>');
+			document.write('Valor de la variable objeto después de llamar a la función: ');
+			document.write(numero_2.numero);
+		</script>
+	</body>
+</html>

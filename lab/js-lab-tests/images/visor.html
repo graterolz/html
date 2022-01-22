@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visor</title>
+		<script type="text/javascript">
+			// Precarga de las imágenes
+			var fuente_imagenes = new Array(
+				'imagen1.jpg',
+				'imagen2.jpg',
+				'imagen3.jpg',
+				'imagen4.jpg',
+				'imagen5.jpg'
+			);
+
+			var imagenes = new Array(); 
+			for(var i=0;i<fuente_imagenes.length;i++) {
+				imagenes[i] = new Image();
+				imagenes[i].src = fuente_imagenes[i]; 
+			}
+
+			// Indica la imagen que se encuentra en el visor
+			var imagen_actual = 0;
+
+			// Muestra en el visor de imágenes la imagen actual
+			function mostrar_imagen(imagenes){
+				document.visor.src=imagenes[imagen_actual].src;
+			}
+			// Avanza a la siguiente imagen
+			function siguiente(imagenes) {
+				imagen_actual = imagen_actual + 1;
+				if (imagen_actual == imagenes.length)
+					imagen_actual = 0;
+				mostrar_imagen(imagenes);
+			}
+			// Retrocede a la imagen anterior
+			function anterior(imagenes) {
+				imagen_actual = imagen_actual - 1;
+				if (imagen_actual == -1)
+					imagen_actual = imagenes.length-1;
+				mostrar_imagen(imagenes);
+			}
+			// Retrocede hasta la primera imagen
+			function primera(imagenes) {
+				imagen_actual = 0;
+				mostrar_imagen(imagenes);
+			}
+			// Avanza hasta la ultima imagen
+			function ultima(imagenes){
+				imagen_actual = imagenes.length-1;
+				mostrar_imagen(imagenes);
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Visor de Imágenes</h3>
+		<table cellpadding=0 cellspacing=0 border=0>
+			<tr>
+				<td colspan=4>
+					<center><img src='imagen1.jpg' name='visor' width=50 height=50 border=0></center>
+				</td>
+			</tr>
+			<tr>
+				<td align='left'>
+					<input type='button' onClick='primera(imagenes)' value='Primera'>
+				</td>
+				<td align='left'>
+					<input type='button' onClick='anterior(imagenes)' value='Anterior'>
+				</td>
+				<td align='left'>
+					<input type='button' onClick='siguiente(imagenes)' value='Siguiente'>
+				</td>
+				<td align='left'>
+					<input type='button' onClick='ultima(imagenes)' value='Ultima'>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

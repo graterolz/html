@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>comparacion-strings</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var minusculas= "abc";
+			var mayusculas= "ABC";
+			//
+			document.write('minusculas = "abc"');
+			document.write('<br>');
+			document.write('mayusculas = "ABC"');
+			document.write('<br><hr>');
+			document.write('¿ Es minusculas igual al string "abc" ?: ');
+			document.write(minusculas=="abc");
+			document.write('<br>');
+			document.write('¿ Es mayusculas igual al string "abc" ?: ');
+			document.write(mayusculas=="abc");
+			document.write('<br>');
+			document.write('¿ Es minusculas menor que mayusculas ?: ');
+			document.write(minusculas < mayusculas);
+			document.write('<br>');
+			document.write('¿ Es "Ab" mayor que "ABC" ?: ');
+			document.write("Ab" > "ABC");
+			document.write('<br><hr>');
+			//
+			var z=6;
+			var k='6';
+			document.write('z = 6 (variable tipo número)');
+			document.write('<br>');
+			document.write('k = "6" (variable tipo string)');
+			document.write('<br><hr>');
+			document.write('¿ Es z igual a "6" ? (""+z=="6"): ');
+			document.write(""+z=="6"); 
+			document.write('<br>');
+			document.write('¿ Es k igual a 6 ? (0+k==6): ');
+			document.write(0+k==6);
+			document.write('<br>');
+			document.write('<br>');
+			//
+			var saludo="Buenos Días";
+			var nombre= prompt("Introduce tu nombre", "");
+			var mensaje = saludo+" "+nombre;
+			document.write('<br>');
+			document.write('<h1>'); 
+			document.write(mensaje);
+			document.write('</h1>');
+		</script>
+	</body>
+</html>

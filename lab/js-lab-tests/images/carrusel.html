@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Carrusel</title>
+		<script type="text/javascript">
+			function oCarrusel(lista, tiempo, cuadro, iden, retraso){
+				this.iden = iden;
+				this.tiempo = tiempo;
+				this.imagenes = new Array();
+				this.imgact = -1;
+				this.espera = null;
+				this.ventana = cuadro;
+				this.precarga = oCarrusel_precarga;
+				this.iniciar = oCarrusel_iniciar;
+				this.animar = oCarrusel_animar;
+				this.precarga(lista);
+				this.espera = setInterval(this.iden+".iniciar()", retraso+1);
+			}
+
+			function oCarrusel_precarga(lista){
+				var ind;
+				for (ind in lista){
+					this.imagenes[ind] = new Image();
+					this.imagenes[ind].src = lista[ind]
+				}
+			}
+
+			function oCarrusel_iniciar(){
+				var obj=this;
+				if (document.images[obj.ventana]){
+					clearInterval(obj.espera);
+					obj.ventana = document.images[obj.ventana];
+					obj.imgact = 0;
+				}
+			}
+
+			function oCarrusel_animar(arg){
+				var presentar;
+				if (!arg)
+					arg=this.iden;
+					presentar = eval(arg);
+
+				var sigte = presentar.tiempo;
+				if (presentar.imgact>-1){
+					presentar.ventana.src = presentar.imagenes[presentar.imgact].src;
+					presentar.imgact++;
+					if (presentar.imgact >= presentar.imagenes.length)
+						presentar.imgact=0;
+					}
+				setTimeout(arg+".animar('"+ arg +"')", sigte)
+			}
+		</script>
+		<script type="text/javascript">
+			var lista = new Array();
+			lista[0] = 'imagen1.jpg';
+			lista[1] = 'imagen2.jpg';
+			lista[2] = 'imagen3.jpg';
+			lista[3] = 'imagen4.jpg';
+			lista[4] = 'imagen5.jpg';
+			var intentos=0
+			var mipresent = new oCarrusel(lista, 1200, 'cuadro1', 'mipresent',0);
+
+			function iniciarCarrusel(){
+				mipresent.animar();
+			}
+		</script>
+	</head>
+	<body bgcolor="#FFFFFF" text="#000000" onload="iniciarCarrusel()">
+		<h3>Carrusel de Im&aacute;genes</h3>
+		<p>
+			<img src="imagen1.jpg" width="50" height="50" name="cuadro1">
+		</p>
+	</body>
+</html>

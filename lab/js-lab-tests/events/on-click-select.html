@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-click-select</title>
+		<script type="text/javascript">
+			function marcasSeleccionadas(){
+				with (document.formulario) {
+					for(i=0;i<marcas.length;i++) {
+						if (marcas.options[i].selected){
+							alert(marcas.options[i].text + ' seleccionada');
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="formulario">
+			<h1>Selección de marcas:</h1>
+			<select name="marcas" multiple>
+				<option>Audi</option>
+				<option>BMW</option>
+				<option>Ferrari</option>
+				<option>Porsche</option>
+				<option>Seat</option>
+				<option>Volvo</option>
+			</select>
+			<br>
+			<br>
+			<input type="submit" onClick="marcasSeleccionadas()">
+		</form>
+	</body>
+</html>

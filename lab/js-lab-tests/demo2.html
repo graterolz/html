@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ventanas</title>
+		<script type="text/javascript">
+			function crea_ventana() {
+				var Nueva_Ventana;
+				var atributos = "toolbar=0, menubar=0, left=100, top=200,";
+				atributos = atributos + "width=";
+				atributos = atributos + document.caracteristicas.ancho_ventana.value+",";
+				atributos = atributos + "height=";
+				atributos = atributos + document.caracteristicas.alto_ventana.value;
+				Nueva_Ventana = window.open("","Nueva_Ventana",atributos);
+				Nueva_Ventana.document.write("<button type = 'button' onClick='self.close()'>Cerrar</button>");
+			}
+		</script>
+	</head>
+	<body>
+		<h4 align="center">Creación de una nueva ventana</h4>
+		<form name = "caracteristicas">
+			<table align="center">
+				<tr>
+					<td>Ancho de la ventana</td>
+					<td><input type="text" name="ancho_ventana" value="40"></td>
+				</tr>
+				<tr>
+					<td>Alto de la ventana</td>
+					<td><input type="text" name="alto_ventana" value="20"></td>
+				</tr>
+			</table>
+		</form> 
+		<p align="center">
+			<button type="button" onClick="crea_ventana()">Nueva Ventana</button>
+		</p>
+	</body>
+</html>

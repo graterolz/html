@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-click-radio</title>
+		<script type="text/javascript">
+			function comprobarRadio() {
+				with (document.formulario) {
+					for(i=0;i<pago.length;i++) {
+						if (pago[i].checked){
+							alert('El pago se realizará con ' + pago[i].value);
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name='formulario'>
+			<h1>Forma de pago:</h1>
+			<input type="radio" name="pago" value="Tarjeta">Tarjeta de crédito<br>
+			<input type="radio" name="pago" value="Metálico">Metálico<br>
+			<input type="radio" name="pago" value="Cheque">Cheque<br>
+			<br>
+			<input type="submit" onClick="comprobarRadio()">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>on-focus</title>
+		<script type="text/javascript">
+			function comprobacion(objeto) {
+				with (document.formulario) {
+					switch(objeto.name) {
+						case 'cateto1':
+							if ((cateto2.value!='') && (hipotenusa.value!='')){
+								cateto1.value = Math.sqrt(hipotenusa.value*hipotenusa.value-cateto2.value*cateto2.value);
+							}
+							break;
+						case 'cateto2':
+						if ((cateto1.value!='') && (hipotenusa.value!='')){
+							cateto2.value = Math.sqrt(hipotenusa.value*hipotenusa.value-cateto1.value*cateto1.value);
+						}
+						break;
+						case 'hipotenusa':
+						if ((cateto1.value!='') && (cateto2.value!='')){
+							hipotenusa.value = Math.sqrt(cateto2.value*cateto2.value+cateto1.value*cateto1.value);
+						}
+						break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="formulario">
+			<h2>Triángulo:</h2>
+			<b>Cateto 1:</b>
+			<br>
+			<input type="text" name="cateto1" onFocus="comprobacion(this)">
+			<br>
+			<b>Cateto 2:</b>
+			<br>
+			<input type="text" name="cateto2" onFocus="comprobacion(this)">
+			<br>
+			<b>Hipotenusa:</b>
+			<br>
+			<input type="text" name="hipotenusa" onFocus="comprobacion(this)">
+		</form>
+	</body>
+</html>

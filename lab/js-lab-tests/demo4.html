@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo de uso del método confirm</title>
+		<script type="text/javascript">
+			function mostrar_saludo() {
+				if (confirm("¿ Seguro que desea mostrar el mensaje de saludo ?"))
+					document.write("<h2 align='center'>Hola mundo</h2>");
+			}
+		</script> 
+	</head> 
+	<body>
+		<p align='center'>
+			<button type = 'button' onClick='mostrar_saludo()'>Mostrar saludo</button>
+		</p>
+	</body>
+</html>

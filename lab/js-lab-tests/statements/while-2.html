@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>while-2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var base,exponente,resultado,i,exp_aux;
+			base = prompt('Dame la base','');
+			exponente = prompt('Dame el exponente','');
+			resultado = 1;
+			i = 1;
+			exp_aux = (exponente>=0) ? exponente : -exponente;
+			
+			while(i<=exp_aux) {
+				resultado = resultado * base
+				i++;
+			}
+			resultado = (exponente>=0)?resultado:1/resultado;
+			document.write(base + '<sup>' + exponente + '</sup>= ' + resultado);
+		</script>
+	</body>
+</html>

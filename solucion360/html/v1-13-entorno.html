@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tablero de control | Solución 360&#176;</title>
+		<link rel="shortcut icon" href="./import/images/icon.png"/>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link href="./import/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="./import/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="./import/iCheck/square/green.css" rel="stylesheet" type="text/css" />
+		<link href="./import/select2/select2.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.css">
+		<link href="./import/redactor/redactor.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+		<link href="./import/dist/css/custom.css" rel="stylesheet" type="text/css" />
+		<link href="./import/iCheck/square/_all.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="skin-green fixed sidebar-mini">
+		<div class="wrapper">
+			<header class="main-header">
+				<a href="#" class="logo">
+				<span class="logo-mini">POS</span>
+				<span class="logo-lg">Solución <b>360&#176;</b></span>
+				</a>
+				<nav class="navbar navbar-static-top" role="navigation">
+					<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</a>
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li class="hidden-xs hidden-sm">
+								<a href="#" class="clock"></a>
+							</li>
+							<li class="dropdown user user-menu" style="padding-right:5px;">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="./images/male.png" class="user-image" alt="Avatar" />
+								<span class="hidden-xs">Admin Admin</span>
+								</a>
+								<ul class="dropdown-menu" style="padding-right:3px;">
+									<li class="user-header">
+										<img src="./images/male.png" class="img-circle" alt="Avatar" />
+										<p>admin@simple-ti.com <small>Miembro desde 24/06/2015 10:59 PM</small></p>
+									</li>
+									<li class="user-footer">
+										<div class="pull-left">
+											<a href="#" class="btn btn-default btn-flat">Editar usuario</a>
+										</div>
+										<div class="pull-right">
+											<a href="#" class="btn btn-default btn-flat">Desconectar</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<aside class="main-sidebar">
+				<section class="sidebar">
+					<ul class="sidebar-menu">
+						<li id="mm_bienvenida_index">
+							<a href="#"><i class="fa fa-folder-o"></i><span>Bienvenida</span></a>
+						</li>
+						<li id="mm_auditoria">
+							<a href="#"><i class="fa fa-eye"></i> <span>Auditoría</span></a>
+						</li>
+						<li id="mm_opcion">
+							<a href="#"><i class="fa fa-folder-open-o"></i> <span>Opción</span></a>
+						</li>
+						<li class="treeview" id="mm_perfil">
+							<a href="#"><i class="fa fa-unlock-alt"></i><span>Perfil</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_perfil_index">
+									<a href="#"><i class="fa fa-circle-o"></i>Listar perfil</a>
+								</li>
+								<li id="mm_perfil_add">
+									<a href="#"><i class="fa fa-circle-o"></i>Ingresar perfil</a>
+								</li>
+							</ul>
+						</li>
+						<li id="mm_parametro">
+							<a href="#"><i class="fa fa-cogs"></i> <span>Parámetros</span></a>
+						</li>
+						<li class="treeview" id="mm_usuario">
+							<a href="#"><i class="fa fa-user"></i><span>Usuario</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_usuario_index"><a href="#"><i class="fa fa-circle-o"></i>Listar Usuario</a></li>
+								<li id="mm_usuario_add"><a href="#"><i class="fa fa-circle-o"></i>Ingresar Usuario</a></li>
+							</ul>
+						</li>
+						<li class="treeview" id="mm_empleado">
+							<a href="#"><i class="fa fa-user"></i><span>Empleado</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_empleado_index"><a href="#"><i class="fa fa-circle-o"></i>Listar Empleado</a></li>
+								<li id="mm_empleado_add"><a href="#"><i class="fa fa-circle-o"></i>Ingresar Empleado</a></li>
+							</ul>
+						</li>
+						<li class="treeview" id="mm_externo">
+							<a href="#"><i class="fa fa-user"></i><span>Personal externo</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_externo_index"><a href="#"><i class="fa fa-circle-o"></i>Listar personal externo</a></li>
+								<li id="mm_externo_add"><a href="#"><i class="fa fa-circle-o"></i>Ingresar personal externo</a></li>
+							</ul>
+						</li>
+						<li class="treeview" id="mm_tiposeguro">
+							<a href="#"><i class="fa fa-folder-open"></i><span>Tipo seguro</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_tiposeguro_index"><a href="#"><i class="fa fa-circle-o"></i>Listar tipo seguro</a></li>
+								<li id="mm_tiposeguro_add"><a href="#"><i class="fa fa-circle-o"></i>Ingresar tipo seguro</a></li>
+							</ul>
+						</li>
+						<li class="treeview" id="mm_agrupacion">
+							<a href="#"><i class="fa fa-users"></i><span>Agrupación</span><i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li id="mm_agrupacion_index"><a href="#"><i class="fa fa-circle-o"></i>Listar agrupación</a></li>
+								<li id="mm_agrupacion_add"><a href="#"><i class="fa fa-circle-o"></i>Ingresar agrupación</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</aside>
+			<div class="content-wrapper">
+				<!-- </div> tag end in footer file  -->
+				<section class="content-header">
+					<h1>Tablero de control</h1>
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+						<li class="active">Tablero de control</li>
+					</ol>
+				</section>
+				<div class="col-lg-12 alerts">
+				</div>
+				<section class="content">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box box-success">
+								<div class="box-header">
+									<h3 class="box-title">Acceso rápido</h3>
+								</div>
+								<a class="btn btn-app" href="#"><i class="fa fa-eye"></i>auditoría</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-folder-open-o"></i>opción</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-unlock-alt"></i>perfil</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-cogs"></i>parámetros</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-user"></i>Usuario</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-user"></i>Empleado</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-user"></i>personal externo</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-folder-open"></i>tipo seguro</a>
+								<a class="btn btn-app" href="#"><i class="fa fa-users"></i>agrupación</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- </div> tag start in header file - class="content-wrapper" -->
+			<div class="modal" data-easein="flipYIn" id="posModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+			<footer class="main-footer">
+				<div class="pull-right hidden-xs">
+					<!-- Version <strong>4.0</strong> //-->
+					<p class="footer">Page rendered in <strong>0.1928</strong> seconds. CodeIgniter Version <strong>3.1.0</strong></p>
+				</div>
+				Copyright &copy; 2016 Solución <b>360&#176;</b>. Todos los derechos reservados.
+			</footer>
+		</div>
+		<!-- </div> tag start in header file - class="wrapper" -->
+		<div id="ajaxCall"><i class="fa fa-spinner fa-pulse"></i></div>
+		<script type="text/javascript">
+			// Opciones que se muestran en la auditoria de la aplicación
+			var AuditOptions = {
+				'LGN' : 'Ingresó',
+				'FND' 	: 'Búsqueda',
+				'VIE' 	: 'Se revisó',
+				'ADD' 	: 'Se agregó',
+				'UPD': 'Se actualizó',
+				'DLT': 'Se eliminó',
+				'REV': 'Se revirtió',
+				'': 'No definido',
+			};
+			// Funcion que traslada la auditoria en el componente DataTable
+			function jsAuditAction(data, type, row, meta) {
+				if(data !== null) {
+					lsCadena = AuditOptions[row.cc_accion];
+					return lsCadena;
+				}
+				return 'No definido';
+			}
+			
+			var dataTablePluginLang = {
+				// datos de configuración generica del control dataTable
+				lengthMenu 		: "Ver&nbsp;&nbsp;_MENU_&nbsp;&nbsp;registros por pagina", 	
+				search 			: "Buscar:&nbsp;&nbsp;_INPUT_", 	
+				zeroRecords 	: "No se encontraron registros", 	
+				info 			: "Viendo _START_ al _END_ de _TOTAL_ registros", 	
+				infoEmpty 		: "Viendo 0 al 0 de 0 registros", 	
+				infoFiltered 	: "(filtrado de _MAX_ registros en total)", 	
+				// variables para la paginacion de registros
+				first 			: "<i class='fa fa-fw fa-fast-backward'>", 	
+				next 			: "<i class='fa fa-fw fa-step-forward'>", 	
+				previous 		: "<i class='fa fa-fw fa-step-backward'>", 	
+				last 			: "<i class='fa fa-fw fa-fast-forward'>"	
+			};
+			
+			var formValidationLang = {
+				formValid_choose_options 		: "Por favor eliga %s - %s opciones", 	
+				formValid_choose_options_at_max : "Por favor eliga %s opciones como máximo", 	
+				formValid_choose_options_at_min : "Por favor eliga %s opciones como mínimo", 	
+				formValid_choose_valid_file 	: "Por favor eliga un archivo válido", 	
+				formValid_enter_date_after 		: "Por favor ingrese una fecha después de %s", 	
+				formValid_enter_date_before 	: "Por favor ingrese una fecha antes de %s", 	
+				formValid_enter_date_range 		: "Por favor ingrese una fecha en el siguiente rango %s - %s", 	
+				formValid_enter_diff_value 		: "Por favor ingrese un valor diferente", 	
+				formValid_enter_valid_color 	: "Por favor ingrese un color válido", 	
+				formValid_enter_valid_cc_number : "Por favor ingrese un numero de tarjeta de credito válida", 	
+				formValid_enter_valid_date 		: "Por favor ingrese una fecha válida", 	
+				formValid_enter_valid_email 	: "Por favor ingrese un correo válido", 	
+				formValid_enter_valid_float 	: "Por favor ingrese un numero decimal válido", 	
+				formValid_enter_valid_number 	: "Por favor ingrese un numero entero válido", 	
+				formValid_enter_valid_uri 		: "Por favor ingrese una URL válida", 	
+				formValid_enter_valid_value 	: "Por favor ingrese un valor válido", 	
+				formValid_enter_value_betwen_strictly 	: "Por favor ingrese un valor entre %s y %s estrictamente", 	
+				formValid_enter_value_betwen 	: "Por favor ingrese un valor entre %s y %s", 	
+				formValid_enter_value_greater 	: "Por favor ingrese un valor mas grande que %s", 	
+				formValid_enter_value_greater_or_equal 	: "Por favor ingrese un valor mas grande o igual a %s", 	
+				formValid_enter_value_less 		: "Por favor ingrese un valor menos que %s", 	
+				formValid_enter_value_less_or_equal 	: "Por favor ingrese un valor menos o igual a %s", 	
+				formValid_enter_value_matching 	: "Por favor ingrese un valor que coincida con el patrón", 	
+				formValid_enter_value_length 	: "Por favor ingrese un valor con longitud válida", 	
+				formValid_enter_value 			: "Por favor ingrese un valor", 	
+				formValid_enter_less 			: "Por favor ingrese menos de %s caracteres", 	
+				formValid_enter_more 			: "Por favor ingrese more than %s characters", 	
+				formValid_enter_only_digits 	: "Por favor ingrese only digits", 	
+				formValid_enter_same_value 		: "Por favor ingrese the same value", 	
+				formValid_enter_value_between_chr_long 	: "Por favor ingrese value between %s and %s characters long", 	
+			};
+			
+			var base_url = '#';
+			var dateformat = 'd/m/Y', timeformat = 'h:i A';
+			var Settings = {"created_by":null,"created_at":null,"updated_by":null,"updated_at":null,"logo":null,"site_name":"Soluci\u00f3n <b>360&#176;<\/b>","tel":"0105292122","dateformat":"d\/m\/Y","timeformat":"h:i A","language":"spanish","theme":"default","mmode":"0","captcha":"0","currency_prefix":"S\/.","default_customer":"1","default_tax_rate":"18%","rows_per_page":"10","total_rows":"30","header":"<h2>Soluci\u00f3n <b>360&#176;<\/b><\/h2>Jr. Hualcan 1210, Urb. Covida,<br>Los Olivos, Lima<br>","footer":"\u00a1Gracias por su compra!\r\n<br>","bsty":"3","display_kb":"0","default_category":"5","default_discount":"10","item_addition":"1","barcode_symbology":"code39","pro_limit":"10","decimals":"2","thousands_sep":",","decimals_sep":".","focus_add_item":"ALT+F1","add_customer":"ALT+F2","toggle_category_slider":"ALT+F10","cancel_sale":"ALT+F5","suspend_sale":"ALT+F6","print_order":"ALT+F11","print_bill":"ALT+F12","finalize_sale":"ALT+F8","today_sale":"Ctrl+F1","open_hold_bills":"Ctrl+F2","close_register":"ALT+F7","java_applet":"0","receipt_printer":"Microsoft Print to PDF","pos_printers":"Microsoft Print to PDF","cash_drawer_codes":"","char_per_line":"42","rounding":"1","pin_code":"22c14f311a60486b36f79f3bc962be66","purchase_code":"65daf704-3c87-495c-a65a-f34d83ade6ca","envato_username":"jaime-nicoll"};
+			/* $(window).load(function () {
+				$('#mm_welcome').addClass('active');
+				$('#welcome_index').addClass('active');
+			}); */
+			
+			// function for change language
+			function OnClickLanguage(pslanguage, psDirectory){
+				if('spanish' == pslanguage){
+					return;
+				}
+				location.href = psDirectory+'/'+pslanguage;
+				document.forms[0].submit();
+				return;
+			}	
+		</script>
+		<script src="./import/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+		<script src="./import/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+		<script src="./import/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+		<script src="./import/fastclick/fastclick.min.js" type="text/javascript"></script>
+		<script src="./import/redactor/redactor.min.js" type="text/javascript"></script>
+		<script src="./import/iCheck/icheck.min.js" type="text/javascript"></script>
+		<script src="./import/select2/select2.full.min.js" type="text/javascript"></script>
+		<script src="./import/dist/js/common-libs.js" type="text/javascript"></script>
+		<script src="./import/dist/js/app.min.js" type="text/javascript"></script>
+		<script src="./import/dist/js/custom.js" type="text/javascript"></script>
+		<script src="./import/dist/js/pages/all.js" type="text/javascript"></script>
+	</body>
+</html>

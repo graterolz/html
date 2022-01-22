@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>for-in-2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var autores = new Array();
+			var correos = new Array();
+
+			autores[0] = 'Soledad, Delgado Sanz';
+			autores[1] = 'Jesús, Bobadilla Sancho';
+			autores[2] = 'Jorge, Tejedor Cerbel';
+			autores[3] = 'Abraham, Gutiérrez Rodríguez';
+
+			correos[0] = 'sole@email.com';
+			correos[1] = 'jbobi@email.com';
+			correos[2] = 'jtejedor@email.com';
+			correos[3] = 'abraham@email.com';
+
+			document.write("<table border=1 cellpadding=5>");
+			document.write("<tr bgColor='Yellow'>");
+			document.write("<th>Autor</th><th>Correo</th>");
+			document.write("</tr>");
+
+			for(var posicion in autores){
+				document.write("<tr align='center'>");
+				document.write("<td>" + autores[posicion] + "</td>");
+				document.write("<td>" + correos[posicion] + "</td>");
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</body>
+</html>

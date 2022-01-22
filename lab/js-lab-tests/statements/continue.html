@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>continue</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numero,es_primo,divisor;
+			do {
+				numero = prompt('Dame un número mayor que 1','');
+			} while (isNaN(numero) || (numero<2));
+
+			document.write('Los divisores primos del ' + numero + ' son: <br>');
+
+			bucle_principal : 
+			for(divisor=1;divisor<=numero;divisor++) {
+				if (numero % divisor == 0) {
+					for(i=2;i<divisor;i++) {
+						if (divisor  % i == 0)
+							continue bucle_principal;
+					}
+					document.write('<b>' + divisor + '</b>x ' + (numero/divisor) + ' = ' + numero + '<br>');
+				}
+			}
+		</script>
+	</body>
+</html>
